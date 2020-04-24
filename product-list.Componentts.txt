@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'pm-products',
+  templateUrl: './product-list.component.html'
+})
+export class ProductListComponent {
+  pageTitle: string ='Asset Management System';
+  imageWidth: number =50;
+  imageMargin: number =50;
+  showImage: boolean = false;
+  listFilter: string = 'cart';
+  products : any[]=[
+      {
+    "productId" : 2,
+    "productName" : "Garden cart",
+    "productCode" :"234",
+    "releseDate" : "March,23, 2019",
+    "price":32.99,
+    "starRating":4.8,
+    "imageURL":"assets/images/garde_cart.pg"
+ }
+];
+toggleImage(): void {
+    this.showImage=!this.showImage
+}
+}
